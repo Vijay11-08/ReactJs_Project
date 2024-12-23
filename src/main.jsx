@@ -15,6 +15,5 @@ createRoot(document.getElementById('root')).render(
       </ul>
     </nav>
     <h1>Hello, Vijay!</h1>
-
   </StrictMode>,
 )
