@@ -7,7 +7,9 @@
 </head>
 <body style="background-color: aqua;">
     <h1>Lecture 1: Introduction to HTML</h1>
-    <script>
+    <script >
+        // Press Ctrl + Shift + i
+        // Then Go To Console & Show Output....
         var a=10;
         var b=20;
         var c=30;
@@ -15,6 +17,26 @@
         console.log(a);
         console.log(b);
         console.log(c);
+        console.log(`a+b = $a + $b`)
+        console.log(`a+b = ${a} + ${b}`)
+        console.log(`a+b = ${a + b}`)
+        console.log('a+b =',(a + b))
+        console.log('a+b =',(a + b),'Vijay')
+
+        //create a function to find out additions of all elements of given array
+
+        var arr=[4,5,6,7]
+        function additions(arr){
+            var sum=0;
+            arr.forEach(element => {
+                sum +=element;
+
+            });
+            return sum;
+        }
+        console.log(additions(arr))
+
+        // create a array a functions which can double values of given array. like 4,5,6,7 that 8,10,12,14 like wise
     </script>
 </body>
 </html>
