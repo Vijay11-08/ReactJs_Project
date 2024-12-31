@@ -8,6 +8,12 @@ class MyCustComponent extends React.Component {
         var2: "Btn1",
         var3: ["a", "b", "c", "d", "e"],
     };
+    constructor(){
+        super();
+        setTimeout(()=>
+        this.setState({var1: false, var2: "Btn2", var3: ["f", "g", "h", "i", "j"]}),
+        2000);  // 2 seconds later
+    }
     render() {
        const { var1, var2, var3} = this.state;
         return(
