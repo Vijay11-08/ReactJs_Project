@@ -1,11 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-//import StateManagegement3 from './Lecture30_12_2024/StateManagement3';
-import MyCustComponent from './Lecture31_12_2024/PropesExample3';
+import PureFunctions from './Lecture31_12_2024/PureFunctions'
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-<MyCustComponent/>
+<PureFunctions var1={true} var2={"Hello world!"}/>
+<PureFunctions var1={false} var2={"Hello Vijay!"}/>
+
   </StrictMode>,
 )
 
