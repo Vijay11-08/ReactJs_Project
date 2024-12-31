@@ -38,3 +38,11 @@ class Component1 extends React.Component
 }
 
 export default Component1;
+
+
+// 1. Class Base Implementation
+// 2. Functional Base Implementation
+// JSX  JavaScript XML 
+// Different Between JavaScript and HTML
+// <DIV> javascript element in uppercase    
+// <div>   Html Element are in lowercase
