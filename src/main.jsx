@@ -1,13 +1,16 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import PureFunctions from './Lecture31_12_2024/PureFunctions'
-
+import MyCustButton from './Lecture31_12_2024/PureFunction2'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-<PureFunctions var1={true} var2={"Hello world!"}/>
-<PureFunctions var1={false} var2={"Hello Vijay!"}/>
-
+    <MyCustButton/>
+    <br />
+    <MyCustButton var1={true}/>
+    <br />
+    <MyCustButton var2={"IT - A "}/>
+    <br />
+    <MyCustButton var1={true} var2={"B.Tech (IT-A) "}/>
   </StrictMode>,
 )
 
