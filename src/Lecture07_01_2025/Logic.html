@@ -1,0 +1,61 @@
+<p>
+function Excersize1(){
+    const [num1 , setnum1] = useState(10);
+    const [num2 , setnum2] = useState(5);
+    const [result , setresult] = useState(0);
+    return(
+        <div>
+            <input type="number" value={num1} onChange={(e)=>setnum1(e.target.value)} />
+            <input type="number" value={num2} onChange={(e)=>setnum2(e.target.value)} />
+            <button onClick={() => setresult(num1 + num2)}>Addition</button>
+            <button onClick={() => setresult(num1 - num2)}>Substraction</button>
+            <button onClick={() => setresult(num1 * num2)}>Multiplication</button>
+            <button onClick={() => setresult(num1 / num2)}>Division</button>
+            <p>result : {result}</p>
+        </div>
+        );
+    }
+    export default Excersize1;
+</p>
+
+<p>
+    function Excersize2(){
+        const [email , setemail] = useState("");
+        return(
+            <div>
+                    <input type="email" value={email} onChange={(e) => setemail(e.target.value)} />
+                    <button onClick={() => console.log(email)}>Submit</button>
+                    {email.includes("@") && email.includes(".")? <p>Valid Email</p> : <p>Invalid Email</p>}
+            </div>
+        );
+    }
+    export default Excersize2;
+</p>
+
+<p>
+    function Excersize3(){
+        const [text , settext] = useState("");
+        return(
+            <div>
+                    <input type="text" value={text} onChange={(e) => settext(e.target.value)} />
+                    <button onClick={() => settext("")}>
+                        {text? "Hide Text" : "Show Text"}
+                    </button>    
+                    <p>Visible Text: {text}</p>
+            </div>
+        );
+    }
+</p>
+
+<p>
+    
+function Excersize4(){
+    const [char , setchar] = useState("");
+    return(
+        <div>
+                <input type="text" value={char} onChange={(e)=>setchar(e.target.value)}/>
+                <p>Total characters: {char.length}</p>
+        </div>
+    );
+}
+</p>

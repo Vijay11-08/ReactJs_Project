@@ -8,7 +8,13 @@ function Excersize4(){
         <div>
          <h1>Exercise 4</h1>
                 <p>Create a React component that will take text input and print total number of characters</p>
+               
+               
+               
                 <input type="text" value={char} onChange={(e)=>setchar(e.target.value)}/>
+
+                <br />
+                
                 <p>Total characters: {char.length}</p>
 
 
