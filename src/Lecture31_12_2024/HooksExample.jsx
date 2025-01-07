@@ -5,6 +5,7 @@ function HookExample1(){
         return <h1>{name}</h1>
 }
 
+
 export default HookExample1;
 
 // Hooks in React :- Hooks are a new feature that let you use state and other React features without writing a class. Hooks are a way to reuse stateful logic between components.

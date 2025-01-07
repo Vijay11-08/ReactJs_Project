@@ -1,10 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import HookExcersize from './Lecture06_01_2025/HookExcersize'
+
+import Excersize4 from './Lecture07_01_2025/Excersize4'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-<HookExcersize/>
+<Excersize4/>
   </StrictMode>,
 )
 
