@@ -2,17 +2,19 @@ import { useState } from "react";
 
 function Excersize2(){
     const [email , setemail] = useState("");
-
-
+    const[etxt , setEtxt] = useState("");
     return(
         <div>
          <h1>Exercise 2</h1>
                 <p>Create a React component that will take email address as an input and check that is valid or not</p>
-        
                 <input type="email" value={email} onChange={(e) => setemail(e.target.value)} />
                 <button onClick={() => console.log(email)}>Submit</button>
-
                 {email.includes("@") && email.includes(".")? <p>Valid Email</p> : <p>Invalid Email</p>}
+            
+
+            <label>Doing By Sir</label>
+            <input type="text" value={etxt}  onChange={(e) => setEtxt(e.target.value)}/>
+
             
         </div>
     );

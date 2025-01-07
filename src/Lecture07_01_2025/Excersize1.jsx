@@ -10,10 +10,16 @@ function Excersize1(){
             <h1>excersize 1</h1>
             <p>create a react pure functions component to take two num and that give a addtion,substration ,multiply and division</p>
             <input type="number" value={num1} onChange={(e)=>setnum1(e.target.value)} />
+            <br />
             <input type="number" value={num2} onChange={(e)=>setnum2(e.target.value)} />
-               
-                <br /><br />
+   
+            <br /><br />
+            {num1} <label> + </label> {num2} <label> = </label> {num1 + num2} <br />
+            {num1} <label> - </label> {num2} <label> = </label> {num1 - num2} <br />
+            {num1} <label> * </label> {num2} <label> = </label> {num1 * num2} <br />
+            {num1} <label> / </label> {num2} <label> = </label> {num1 / num2} <br />
 
+            <br />
                 <button onClick={() => setresult(num1 + num2)}>Addition</button>
                 <br />
                 <br />
