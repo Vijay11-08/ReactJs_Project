@@ -45,6 +45,15 @@ app.delete("/:enrollment_no", (req, res) => {
     );
     res.json(students);
 });
+
+// To search for students
+app.get("/search/:name", (req, res) => {
+    const enrollment_no = req.params.enrollment_no;
+    var  student = students.filter((student)=>
+        student.enrollment_no == enrollment_no 
+    );
+    res.json(student);
+});
 app.listen(port, () =>
   console.log(`Server Started at http://localhost:${port}!`)
 );
