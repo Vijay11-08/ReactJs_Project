@@ -37,6 +37,14 @@ app.put("/:enrollment_no", (req, res) => {
     res.json(students);
 });
 
+// To delete a student
+app.delete("/:enrollment_no", (req, res) => {
+    const enrollment_no = req.params.enrollment_no;;
+    students =students.filter((student)=> 
+            student.enrollment_no != enrollment_no 
+    );
+    res.json(students);
+});
 app.listen(port, () =>
   console.log(`Server Started at http://localhost:${port}!`)
 );
