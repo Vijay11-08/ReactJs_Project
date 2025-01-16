@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function Excersize3(){
     const [text , settext] = useState("");
-    const[button, setbtn] = useState("Show Text");
+   // const[button, setbtn] = useState("Show Text");
     const [btnbool , setbtnbool] = useState(false);
     const [paradisp, setparadisp] = useState("none");
     return(
