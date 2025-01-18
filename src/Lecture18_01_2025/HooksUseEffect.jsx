@@ -19,8 +19,7 @@ function ApiSimulations(){
     const[mm,setMM] = React.useState(0);
     const[ss,setSS]=React.useState(0);
 
-    const[list,setList] = React.useState(0);
-
+    
 
     React.useEffect(()=> {
         FetchUserData().then((data)=> {
@@ -50,7 +49,7 @@ function ApiSimulations(){
             <br />
             <p>Excersize -- 02</p>
             <ul>
-                {list.map((item,index)=> <li key={index}>{item.x} - {item.y}</li>)}
+              
             </ul>
 
         </div>
