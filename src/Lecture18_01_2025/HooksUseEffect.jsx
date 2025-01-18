@@ -34,9 +34,7 @@ function ApiSimulations(){
                     setSS(x%60);
                 },  2000);
 
-                setList(["Apple", "Banana", "Cherry", "Date"]).then((list)=> {
-                    setList(list);
-                },1000);
+            
        });
 
        return(
