@@ -13,17 +13,48 @@ function FetchUserData(){
 function ApiSimulations(){
     const[name, SetName] = React.useState("Loading.........");
     const[id,SetId] = React.useState("Loading........");
+
+
+    const[x,setx]= React.useState(300);
+    const[mm,setMM] = React.useState(0);
+    const[ss,setSS]=React.useState(0);
+
+    const[list,setList] = React.useState(0);
+
+
     React.useEffect(()=> {
         FetchUserData().then((data)=> {
          SetName(data.x);
          SetId(data.y);
        });
+
+                setInterval(()=> {
+                    setx(x-1);
+                    setMM(Math.trunc(x/60));
+                    setSS(x%60);
+                },  2000);
+
+                setList(["Apple", "Banana", "Cherry", "Date"]).then((list)=> {
+                    setList(list);
+                },1000);
        });
 
        return(
         <div>
             Name: {name} <br />
             id: {id}
+            <br />
+            <br />
+            <p>Excersize -- 01</p>
+            <h1>{mm}: {ss}</h1>
+
+            <br />
+            <br />
+            <p>Excersize -- 02</p>
+            <ul>
+                {list.map((item,index)=> <li key={index}>{item.x} - {item.y}</li>)}
+            </ul>
+
         </div>
     );
 }
