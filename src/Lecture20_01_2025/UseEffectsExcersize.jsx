@@ -1,8 +1,6 @@
 //3. implementation image change with the help of useeffects.
 //   create a list of 4 images and change images at interval of 4 seconds
-
 import * as react from "react";
-
 function ImageChange(){
     const [image, setImage] = react.useState("image1.jpg");
     let intial=0;
