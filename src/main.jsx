@@ -1,11 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-
-import ApiSimulations from './Lecture18_01_2025/HooksUseEffect'
+import ImageChange from './Lecture20_01_2025/UseEffectsExcersize'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-<ApiSimulations/>
+<ImageChange/>
   </StrictMode>,
 )
 
