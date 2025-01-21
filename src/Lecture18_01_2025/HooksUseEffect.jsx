@@ -14,12 +14,9 @@ function ApiSimulations(){
     const[name, SetName] = React.useState("Loading.........");
     const[id,SetId] = React.useState("Loading........");
 
-
     const[x,setx]= React.useState(300);
     const[mm,setMM] = React.useState(0);
     const[ss,setSS]=React.useState(0);
-
-    
 
     React.useEffect(()=> {
         FetchUserData().then((data)=> {
@@ -32,8 +29,7 @@ function ApiSimulations(){
                     setMM(Math.trunc(x/60));
                     setSS(x%60);
                 },  2000);
-
-            
+    
        });
 
        return(
@@ -56,10 +52,7 @@ function ApiSimulations(){
     );
 }
 
-
-
 export default ApiSimulations;
-
 
 // Main.jsx
 // import { StrictMode } from 'react'

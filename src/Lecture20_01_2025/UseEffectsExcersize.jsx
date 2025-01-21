@@ -18,7 +18,6 @@ function ImageChange(){
                     <p>Change every 4 seconds</p>
                     <button onClick={() =>clearInterval(interval)}>Stop</button>
                     </div>
-            
             );
     }
 export default ImageChange;
