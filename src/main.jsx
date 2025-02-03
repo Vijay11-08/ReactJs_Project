@@ -1,10 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import ImageChange from './Lecture20_01_2025/UseEffectsExcersize'
+
+import DataTableCricket from './Lecture21_01_2025/Component2'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-<ImageChange/>
+<DataTableCricket/>
   </StrictMode>,
 )
 

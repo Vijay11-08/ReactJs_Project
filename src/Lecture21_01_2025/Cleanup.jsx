@@ -1,35 +1,31 @@
 import { useState, useEffect } from "react";
-import { Promise, resolve } from "bluebird";
-Promise.config({cancellation : true});
+import { Promise } from "bluebird";
 
-function FetchUser (){
-    return new Promise(()=>{
-        setTimeout(()=>{
-            resolve({id : 1 , name : "Vijay"});
-        },5000);
+Promise.config({cancellation: true});
+function FetchUser(){
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve({ id: 1, name: "Beast" });
+        }, 5000);
     });
 }
-
-function CancelRequest(){
-    const [id ,setId] = useState("Loading....");
-    const [name, setName] = useState("Loading....");
-
-    useEffect(()=>{
-        const promise = FetchUser().then((var1)=>{
+function CancelRequest() {
+    const [id, setId] = useState("loading......")
+    const [name, setName] = useState("loading......")
+    useEffect(() => {
+        const promise = FetchUser().then((var1) => {
             setId(var1.id);
             setName(var1.name);
         });
-        return ()=>{
-            promise.cancel();
-        }
+        return() => {
+            promise.cancel(); // cancel the promise when component is destroyed
+        };
     });
-
     return (
         <div>
-            <h1>User ID : {id}</h1>
-            <h1>User Name : {name}</h1>
+            <h1>User ID: {id}</h1>
+            <h2>User name: {name}</h2>
         </div>
     );
 }
-
 export default CancelRequest;
