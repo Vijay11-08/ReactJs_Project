@@ -1,0 +1,12 @@
+const express = require("express");
+const errors = require("./src/utils/errors");
+const category = require("./src/routes/category.routes");
+const product = require("./src/routes/product.routes");
+const app = express();
+const port = 3000;
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(errors.errorHandler);
+app.use("/category", category);
+app.use("/product", product);
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
